@@ -29,7 +29,7 @@ y_pred = model.predict(X_test)
 print(classification_report(y_test, y_pred))
 
 # Save model
-joblib.dump(model, "models/fake_model.pkl")
-joblib.dump(vectorizer, "models/fake_vectorizer.pkl")
+joblib.dump(model, "models/fake_model.joblib")
+joblib.dump(vectorizer, "models/fake_vectorizer.joblib")
 
 print("Fake Review Model Saved.")
