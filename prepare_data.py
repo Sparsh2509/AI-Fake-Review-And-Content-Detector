@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load dataset
-df = pd.read_csv("D:\Sparsh\AI_Projects\AI_Fake_Review_And_Content_Detector\Datasets\fake reviews dataset.csv")
+df = pd.read_csv(r"D:\Sparsh\AI_Projects\AI_Fake_Review_And_Content_Detector\Datasets\fake reviews dataset.csv")
 
 print("Original Columns:", df.columns)
 
@@ -19,7 +19,7 @@ df["label"] = df["label"].map({"OR": 0, "CG": 1})
 df.dropna(inplace=True)
 
 # Save clean dataset
-df.to_csv("Dataset/reviews_clean.csv", index=False)
+df.to_csv("Datasets/reviews_clean.csv", index=False)
 
 print("Clean dataset saved.")
 print(df["label"].value_counts())
