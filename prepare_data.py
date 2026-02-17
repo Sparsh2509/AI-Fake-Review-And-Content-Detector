@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load dataset
-df = pd.read_csv("data/your_dataset_name.csv")
+df = pd.read_csv("D:\Sparsh\AI_Projects\AI_Fake_Review_And_Content_Detector\Datasets\fake reviews dataset.csv")
 
 print("Original Columns:", df.columns)
 
