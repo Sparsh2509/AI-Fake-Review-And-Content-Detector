@@ -2,6 +2,7 @@ import pandas as pd
 import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
@@ -27,6 +28,10 @@ model.fit(X_train, y_train)
 # Evaluate
 y_pred = model.predict(X_test)
 print(classification_report(y_test, y_pred))
+
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy:.4f}")
+
 
 # Save model
 joblib.dump(model, "models/fake_model.joblib")
