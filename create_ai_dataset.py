@@ -15,7 +15,7 @@ model = genai.GenerativeModel("gemini-2.5-flash-lite")
 df = pd.read_csv(r"D:\Sparsh\AI_Projects\AI_Fake_Review_And_Content_Detector\Datasets\reviews_clean.csv")
 
 # Take only REAL reviews (label = 0)
-df_real = df[df["label"] == 0].sample(500, random_state=42)
+df_real = df[df["label"] == 0].sample(120, random_state=42)
 
 ai_reviews = []
 
@@ -32,7 +32,7 @@ Review:
         response = model.generate_content(prompt)
         ai_reviews.append(response.text.strip())
         print(f"Generated: {len(ai_reviews)}")
-        sleep(1)  # Avoid rate limit
+        sleep(3)  # Avoid rate limit
 
     except Exception as e:
         print("Error:", e)
