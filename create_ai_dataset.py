@@ -12,7 +12,7 @@ genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
 # Load cleaned fake-review dataset
-df = pd.read_csv("data/reviews_clean.csv")
+df = pd.read_csv(r"D:\Sparsh\AI_Projects\AI_Fake_Review_And_Content_Detector\Datasets\reviews_clean.csv")
 
 # Take only REAL reviews (label = 0)
 df_real = df[df["label"] == 0].sample(500, random_state=42)
@@ -52,6 +52,6 @@ ai_df = pd.DataFrame({
 final_df = pd.concat([human_df, ai_df])
 
 # Save dataset
-final_df.to_csv("data/reviews_ai_human.csv", index=False)
+final_df.to_csv("Datasets/reviews_ai_human.csv", index=False)
 
 print("✅ AI Dataset Created Successfully.")
