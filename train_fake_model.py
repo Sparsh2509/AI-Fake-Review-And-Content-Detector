@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
 # Load clean dataset
-df = pd.read_csv("data/reviews_clean.csv")
+df = pd.read_csv(r"D:\Sparsh\AI_Projects\AI_Fake_Review_And_Content_Detector\Datasets\reviews_clean.csv")
 
 X = df["text"]
 y = df["label"]
